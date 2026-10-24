@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Bara sparkle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,28 C54,44 62,52 78,54 C62,56 54,64 52,80 C50,64 42,56 26,54 C42,52 50,44 52,28 Z" />
+    <!-- Chhota sparkle -->
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M74,30 C74.7,34.3 76.7,36.3 81,37 C76.7,37.7 74.7,39.7 74,44 C73.3,39.7 71.3,37.7 67,37 C71.3,36.3 73.3,34.3 74,30 Z" />
+</vector>

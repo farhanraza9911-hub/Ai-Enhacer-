@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AI Enhancer</string>
+    <string name="subtitle">Offline photo upscaler &amp; enhancer. Internet ki zaroorat nahi.</string>
+
+    <string name="preview_desc">Photo preview</string>
+    <string name="hint_pick">Photo chunein, phir Enhance dabayein</string>
+
+    <string name="scale_2x">2x</string>
+    <string name="scale_3x">3x</string>
+    <string name="scale_4x">4x</string>
+
+    <string name="tab_settings">Settings</string>
+    <string name="tab_look">Look</string>
+    <string name="preset_portrait">Portrait</string>
+    <string name="preset_natural">Natural</string>
+    <string name="preset_sharp">Sharp</string>
+    <string name="lbl_strength">AI strength  %1$d</string>
+    <string name="lbl_smooth">Skin smooth  %1$d</string>
+    <string name="lbl_vivid">Vivid colour  %1$d</string>
+    <string name="lbl_clarity">Clarity  %1$d</string>
+
+    <string name="use_gpu">GPU use karein (tez, Vulkan)</string>
+    <string name="save_png">PNG mein save karein (best quality, file bari)</string>
+
+    <string name="btn_pick">Photo</string>
+    <string name="btn_enhance">Enhance</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_save">Save</string>
+
+    <string name="badge_original">Original</string>
+    <string name="badge_enhanced">Enhanced (dabaye rakhein = original)</string>
+
+    <string name="info_original">Original: %1$d × %2$d px</string>
+    <string name="info_done">Result: %1$d × %2$d px · %3$.1f sec · %4$s</string>
+    <string name="info_downscaled">Photo bari thi, memory ki hadd ki wajah se pehle chhoti ki gayi. Zyada size chahiye to 2x chunein.</string>
+    <string name="backend_gpu">GPU</string>
+    <string name="backend_cpu">CPU</string>
+
+    <string name="status_idle">Tayyar</string>
+    <string name="status_loading">Photo khul rahi hai…</string>
+    <string name="status_loading_model">AI model load ho raha hai… (pehli dafa kuch second lagte hain)</string>
+    <string name="status_preparing">Photo tayyar ho rahi hai…</string>
+    <string name="status_no_gpu">Is phone par GPU (Vulkan) available nahi, CPU use ho raha hai (slow)</string>
+    <string name="status_progress">Enhance ho rahi hai… %1$d / %2$d tiles</string>
+    <string name="status_done">Ho gaya! \"Look\" tab se style badlein, phir Save dabayein.</string>
+    <string name="status_cancelling">Cancel ho raha hai…</string>
+    <string name="status_cancelled">Cancel kar diya</string>
+    <string name="status_saving">Save ho rahi hai…</string>
+    <string name="status_saved">Save ho gayi: Pictures/AIEnhancer/%1$s</string>
+
+    <string name="err_open">Photo khul nahi saki</string>
+    <string name="err_model">AI model load nahi hua</string>
+    <string name="err_process">Enhance fail ho gaya. GPU band kar ke dobara try karein.</string>
+    <string name="err_memory">Memory kam par gayi. Chhoti photo ya 2x try karein.</string>
+    <string name="err_save">Save nahi ho saki</string>
+    <string name="err_permission">Save karne ke liye storage permission chahiye</string>
+    <string name="gpu_crashed">Pichli dafa GPU par masla aaya tha, is liye GPU band hai. Chahein to dobara on kar lein.</string>
+</resources>
