@@ -53,7 +53,7 @@ object FaceAlign {
     const val SIZE = 512
 
     /** Template points (x, y) 512x512 par: eyeL, eyeR, mouthL, mouthR. */
-    private val TEMPLATE = doubleArrayOf(
+    internal val TEMPLATE = doubleArrayOf(
         192.98138, 239.94708,
         318.90277, 240.19360,
         201.26117, 371.41043,

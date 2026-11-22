@@ -86,4 +86,6 @@ dependencies {
     implementation("com.microsoft.onnxruntime:onnxruntime-android:1.22.0")
     // Face detection + landmarks (bundled model, offline)
     implementation("com.google.mlkit:face-detection:16.1.7")
+
+    testImplementation("junit:junit:4.13.2")
 }
