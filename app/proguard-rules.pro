@@ -8,3 +8,7 @@
 -keep interface com.farhan.aienhancer.ProgressListener {
     *;
 }
+
+# ONNX Runtime (JNI)
+-keep class ai.onnxruntime.** { *; }
+-dontwarn ai.onnxruntime.**

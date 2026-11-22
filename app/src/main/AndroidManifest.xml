@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Sirf face AI model (~170 MB) download karne ke liye, user ki ijazat ke baad. Photos kabhi upload nahi hoti. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <!-- Sirf Android 9 (API 28) aur purane ke liye: gallery mein save karne ke liye.
          Android 10+ par koi permission nahi chahiye. -->
     <uses-permission

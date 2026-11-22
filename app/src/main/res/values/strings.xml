@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AI Enhancer</string>
-    <string name="subtitle">Offline photo upscaler &amp; enhancer. Internet ki zaroorat nahi.</string>
+    <string name="subtitle">AI photo &amp; face enhancer. Photo phone se bahar kabhi nahi jati.</string>
 
     <string name="preview_desc">Photo preview</string>
     <string name="hint_pick">Photo chunein, phir Enhance dabayein</string>
@@ -15,7 +15,8 @@
     <string name="preset_portrait">Portrait</string>
     <string name="preset_natural">Natural</string>
     <string name="preset_sharp">Sharp</string>
-    <string name="lbl_strength">AI strength  %1$d</string>
+    <string name="lbl_strength">Enhancement  %1$d</string>
+    <string name="lbl_fidelity">Face fidelity  %1$d</string>
     <string name="lbl_smooth">Skin smooth  %1$d</string>
     <string name="lbl_vivid">Vivid colour  %1$d</string>
     <string name="lbl_clarity">Clarity  %1$d</string>
@@ -29,7 +30,7 @@
     <string name="btn_save">Save</string>
 
     <string name="badge_original">Original</string>
-    <string name="badge_enhanced">Enhanced (dabaye rakhein = original)</string>
+    <string name="badge_enhanced">Slider hila kar before/after dekhein</string>
 
     <string name="info_original">Original: %1$d × %2$d px</string>
     <string name="info_done">Result: %1$d × %2$d px · %3$.1f sec · %4$s</string>
@@ -56,4 +57,35 @@
     <string name="err_save">Save nahi ho saki</string>
     <string name="err_permission">Save karne ke liye storage permission chahiye</string>
     <string name="gpu_crashed">Pichli dafa GPU par masla aaya tha, is liye GPU band hai. Chahein to dobara on kar lein.</string>
+
+    <!-- Modes -->
+    <string name="mode_face">AI Face Enhance</string>
+    <string name="mode_hd">HD Photo</string>
+    <string name="mode_old">Old Photo Restore</string>
+    <string name="mode_blur">Blur Fix</string>
+    <string name="mode_up4">4x AI Upscale</string>
+    <string name="face_restore">Chehra restore karein (GFPGAN AI, ~%1$d MB model)</string>
+
+    <string name="btn_share">Share</string>
+    <string name="btn_fullscreen">Full screen</string>
+    <string name="btn_close">Band karein</string>
+
+    <string name="status_faces_detect">Chehre dhoonde ja rahe hain…</string>
+    <string name="status_faces_restore">Chehra restore ho raha hai… %1$d / %2$d (har chehre par kuch second)</string>
+    <string name="status_faces_loading">Face AI model load ho raha hai…</string>
+    <string name="status_no_faces">Koi chehra nahi mila, sirf poori photo enhance hui.</string>
+    <string name="status_faces_failed">Face restore nahi ho saka (memory/model masla), sirf poori photo enhance hui.</string>
+    <string name="info_faces">Chehre restore hue: %1$d</string>
+    <string name="status_downloading">Face model download ho raha hai… %1$d / %2$d MB</string>
+    <string name="status_download_done">Model tayyar. Enhance shuru ho raha hai…</string>
+
+    <string name="dl_title">Face AI model download karein?</string>
+    <string name="dl_message">Chehra restore karne ke liye GFPGAN AI model chahiye (~%1$d MB, ek dafa download). Wi-Fi behtar hai.\n\nSirf ye model file download hogi. Aapki photos kabhi upload nahi hongi; sab kuch phone par hota hai.</string>
+    <string name="dl_yes">Download</string>
+    <string name="dl_no">Bina face AI</string>
+    <string name="dl_failed">Model download nahi hua. Internet check kar ke dobara try karein.</string>
+    <string name="dl_nospace">Phone mein jagah kam hai (~%1$d MB chahiye).</string>
+    <string name="dl_checksum">Download kharab nikla (checksum mismatch). Dobara try karein.</string>
+    <string name="err_ram">Is phone ki RAM face AI ke liye kam hai (4 GB+ chahiye). Sirf poori photo enhance hogi.</string>
+    <string name="share_title">Enhanced photo share karein</string>
 </resources>
