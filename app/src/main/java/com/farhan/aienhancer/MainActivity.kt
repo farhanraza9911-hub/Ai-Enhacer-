@@ -1047,8 +1047,8 @@ class MainActivity : AppCompatActivity() {
 
         private val EXIF_TAGS = arrayOf(
             ExifInterface.TAG_DATETIME, ExifInterface.TAG_DATETIME_ORIGINAL, ExifInterface.TAG_DATETIME_DIGITIZED,
-            ExifInterface.TAG_MAKE, ExifInterface.TAG_MODEL, ExifInterface.TAG_LENS_MODEL,
-            ExifInterface.TAG_F_NUMBER, ExifInterface.TAG_EXPOSURE_TIME, ExifInterface.TAG_PHOTOGRAPHIC_SENSITIVITY,
+            ExifInterface.TAG_MAKE, ExifInterface.TAG_MODEL, "LensModel",
+            ExifInterface.TAG_F_NUMBER, ExifInterface.TAG_EXPOSURE_TIME, "PhotographicSensitivity", "ISOSpeedRatings",
             ExifInterface.TAG_FOCAL_LENGTH, ExifInterface.TAG_FOCAL_LENGTH_IN_35MM_FILM,
             ExifInterface.TAG_EXPOSURE_PROGRAM, ExifInterface.TAG_METERING_MODE, ExifInterface.TAG_FLASH,
             ExifInterface.TAG_WHITE_BALANCE,
