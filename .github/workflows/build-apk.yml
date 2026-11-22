@@ -41,8 +41,21 @@ jobs:
         with:
           gradle-version: '8.11.1'
 
+      - name: Unit tests (face alignment math)
+        run: gradle :app:testDebugUnitTest --no-daemon --stacktrace
+
       - name: Build debug APK
         run: gradle :app:assembleDebug --no-daemon --stacktrace
+
+      - name: Report APK size and native lib page alignment (Google Play 16 KB requirement)
+        run: |
+          APK=app/build/outputs/apk/debug/app-debug.apk
+          ls -l "$APK"
+          rm -rf /tmp/apkx && mkdir /tmp/apkx && unzip -q "$APK" 'lib/*' -d /tmp/apkx
+          for f in $(find /tmp/apkx/lib -name '*.so' | sort); do
+            al=$(readelf -lW "$f" | awk '$1=="LOAD"{print $NF}' | sort -u | tr '\n' ' ')
+            echo "$f  LOAD-align: $al"
+          done
 
       - uses: actions/upload-artifact@v4
         with:

@@ -29,12 +29,11 @@
         android:background="@drawable/card_bg"
         android:padding="4dp">
 
-        <ImageView
+        <com.farhan.aienhancer.CompareView
             android:id="@+id/preview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/preview_desc"
-            android:scaleType="fitCenter" />
+            android:contentDescription="@string/preview_desc" />
 
         <TextView
             android:id="@+id/hint"
@@ -121,6 +120,96 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Enhancement modes -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/modeGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/modeFace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/seg_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/mode_face"
+                        android:textColor="@color/seg_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/modeHd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/seg_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/mode_hd"
+                        android:textColor="@color/seg_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/modeOld"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/seg_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/mode_old"
+                        android:textColor="@color/seg_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/modeBlur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/seg_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/mode_blur"
+                        android:textColor="@color/seg_text"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/modeUp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:background="@drawable/seg_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:minWidth="96dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/mode_up4"
+                        android:textColor="@color/seg_text"
+                        android:textSize="13sp" />
+                </RadioGroup>
+            </HorizontalScrollView>
+
             <RadioGroup
                 android:id="@+id/scaleGroup"
                 android:layout_width="match_parent"
@@ -168,6 +257,16 @@
                     android:textColor="@color/seg_text"
                     android:textSize="15sp" />
             </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/faceCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/accent"
+                android:checked="true"
+                android:text="@string/face_restore"
+                android:textColor="@color/text"
+                android:textSize="14sp" />
 
             <CheckBox
                 android:id="@+id/gpuCheck"
@@ -260,6 +359,29 @@
 
                 <SeekBar
                     android:id="@+id/seekStrength"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="100"
+                    android:progressTint="@color/accent"
+                    android:thumbTint="@color/accent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblFidelity"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text"
+                    android:textSize="12sp" />
+
+                <SeekBar
+                    android:id="@+id/seekFidelity"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -391,5 +513,30 @@
             android:layout_marginStart="4dp"
             android:layout_weight="1"
             android:text="@string/btn_save" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/shareBtn"
+            style="@style/Widget.App.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="@string/btn_share" />
+
+        <Button
+            android:id="@+id/fullBtn"
+            style="@style/Widget.App.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="@string/btn_fullscreen" />
     </LinearLayout>
 </LinearLayout>

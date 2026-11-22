@@ -81,4 +81,11 @@ kotlin {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.core:core-ktx:1.15.0")
+
+    // Face restoration: GFPGAN ONNX model on-device chalane ke liye
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.22.0")
+    // Face detection + landmarks (bundled model, offline)
+    implementation("com.google.mlkit:face-detection:16.1.7")
+
+    testImplementation("junit:junit:4.13.2")
 }
